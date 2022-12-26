@@ -1,0 +1,110 @@
+@import './Reset.scss';
+@import './Fonts.scss';
+:root {
+    --main-sm-font: 16px;
+    --main-md-font: 20px;
+    --main-lg-font: 26px;
+    --main-color-light: #fff;
+    --main-color-dark: #000;
+}
+body {
+    font-family: 'Lato, Arial, Helvetica, san-serif';
+}
+.container {
+    max-width: 780px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.header {
+    
+    height: 80px;
+    background-color: var(--main-color-dark);
+    color: var(--main-color-light);
+    & .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        font-size: var(--main-lg-font);
+    }
+    &__link {
+        font-size: var(--main-md-font);
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        &.active {
+            border-bottom: 2px solid var(--main-color-light);
+        }
+    }
+    &__search {
+        display: flex;
+        position: relative;
+    }
+    &__inp {
+        height: 30px;
+        width: 250px;
+        padding: 0 10px;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+         
+    }
+    &__btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background: var(--main-color-light);
+        border: none;
+        cursor: pointer;
+        width: 40px;
+    }
+}
+.d-flex {
+    display: flex;
+}
+.bolder {
+    font-weight: 700;
+}
+.main {
+    padding: 80px 0
+}
+.weather {
+    position: relative;
+    color: var(--main-color-light);
+    border-radius: 10px;
+    background: url("https://cdn.pixabay.com/photo/2018/08/23/07/35/thunderstorm-3625405__480.jpg") no-repeat center/cover;
+    &__content {
+        padding: 10px 20px 10px 20px ;
+    }
+    &__place {
+        padding: 20px 20px 5px;
+        border-radius: 8px 8px 0 0;
+        background-color: rgba(20, 19, 36, 0.612);
+    }
+    
+    &__temp {
+        font-size: 60px;
+        margin-bottom: 5px;
+    }
+    &__desc {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    &__info {
+        margin-right: 15px;
+        font-size: 13px;
+    }
+    &__img {
+        position: absolute;
+        right: 55px;
+        top: 38px;
+        width: 100px;
+        
+    }
+
+}
